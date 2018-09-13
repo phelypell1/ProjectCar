@@ -5,12 +5,6 @@
  */
 package br.com.ModelBeans;
 
-import br.com.ModelDao.EstadosDao;
-
-/**
- *
- * @author phelype
- */
 public class ManutencaoBeans {
     private int idManutencao;
     private String ultimaManut;

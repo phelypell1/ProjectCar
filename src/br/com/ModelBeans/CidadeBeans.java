@@ -40,6 +40,12 @@ public class CidadeBeans {
     public void setNomeCidade(String nomeCidade) {
         this.nomeCidade = nomeCidade;
     }
+
+    @Override
+    public String toString() {
+        return getNomeCidade();
+    }
+    
     
     
 }

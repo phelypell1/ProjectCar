@@ -18,21 +18,12 @@ public class DadosCarroBeans {
     private String dataAquisicao;
     private String placaCarro;
     private String chassiVeic;
+    private StatusBeans statusId;
 
     public DadosCarroBeans() {
     }
 
-    public DadosCarroBeans(int idCarro, String codCarro, MarcaVeiculoBeans marcaId, ModeloVeiculoBeans modeloId, String anoFabricacao, String dataAquisicao, String placaCarro, String chassiVeic) {
-        this.idCarro = idCarro;
-        this.codCarro = codCarro;
-        this.marcaId = marcaId;
-        this.modeloId = modeloId;
-        this.anoFabricacao = anoFabricacao;
-        this.dataAquisicao = dataAquisicao;
-        this.placaCarro = placaCarro;
-        this.chassiVeic = chassiVeic;
-    }
-
+    
     /**
      * @return the idCarro
      */
@@ -144,4 +135,25 @@ public class DadosCarroBeans {
     public void setChassiVeic(String chassiVeic) {
         this.chassiVeic = chassiVeic;
     }
+
+    /**
+     * @return the statusId
+     */
+    public StatusBeans getStatusId() {
+        return statusId;
+    }
+
+    /**
+     * @param statusId the statusId to set
+     */
+    public void setStatusId(StatusBeans statusId) {
+        this.statusId = statusId;
+    }
+
+    @Override
+    public String toString() {
+        return getCodCarro();
+    }
+    
+    
 }

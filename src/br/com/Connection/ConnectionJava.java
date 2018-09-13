@@ -16,6 +16,8 @@ public class ConnectionJava {
     public ResultSet rs;
     public PreparedStatement stmt;
 
+    //////Desativa por Motivos de incopatibilidade////////////
+    
     /*public void executaSql(String sql){
         ConnectionJava.getConnection();
         try {
