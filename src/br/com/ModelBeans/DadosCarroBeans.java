@@ -152,8 +152,11 @@ public class DadosCarroBeans {
 
     @Override
     public String toString() {
+        String String;
         return getCodCarro();
     }
-    
-    
+    /*public int toString(){
+        return getIdCarro();
+        
+    }*/
 }

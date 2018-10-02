@@ -18,7 +18,7 @@ public class ConnectionJava {
 
     //////Desativa por Motivos de incopatibilidade////////////
     
-    /*public void executaSql(String sql){
+    public void executaSql(String sql){
         ConnectionJava.getConnection();
         try {
            stmt = (PreparedStatement) getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
@@ -26,7 +26,7 @@ public class ConnectionJava {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Erro ao Buscar! " +e);
         }
-    } */
+    } 
     
     public static Connection getConnection() {
         try {

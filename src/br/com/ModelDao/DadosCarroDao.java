@@ -96,7 +96,7 @@ public class DadosCarroDao {
         List<DadosCarroBeans> carRead = new ArrayList<>();
         
         try {
-            pst = con.prepareStatement("select * from DadosCarro order by codCarro ");
+            pst = con.prepareStatement("select idCarro, codCarro from DadosCarro order by codCarro ");
             rs = pst.executeQuery();
             
             while (rs.next()) {

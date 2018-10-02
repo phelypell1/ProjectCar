@@ -6,34 +6,15 @@
 package br.com.ModelBeans;
 
 public class ManutencaoBeans {
-    private int idManutencao;
-    private String ultimaManut;
-    private DadosCarroBeans carroIds;
-    private String manutencaoKm;
-    private String dataManu;
-    private String dadosManu;
-    private OficinasBeans oficinaId;
-    private String endereco;
-    private CidadeBeans cidadeId;
-    private EstadoBeans estadoId;
-    private double gastoTotal;
-
-    public ManutencaoBeans() {
-    }
-
-    public ManutencaoBeans(int idManutencao, String ultimaManut, DadosCarroBeans carroIds, String manutencaoKm, String dataManu, String dadosManu, OficinasBeans oficinaId, String endereco, CidadeBeans cidadeId, EstadoBeans estadoId, double gastoTotal) {
-        this.idManutencao = idManutencao;
-        this.ultimaManut = ultimaManut;
-        this.carroIds = carroIds;
-        this.manutencaoKm = manutencaoKm;
-        this.dataManu = dataManu;
-        this.dadosManu = dadosManu;
-        this.oficinaId = oficinaId;
-        this.endereco = endereco;
-        this.cidadeId = cidadeId;
-        this.estadoId = estadoId;
-        this.gastoTotal = gastoTotal;
-    }
+   private int idManutencao;
+   private int osManutencao;
+   private DadosCarroBeans veiculoId;
+   private String dataEntrada;
+   private String entradaKm;
+   private String infManutencao;
+   private OficinasBeans oficinaId;
+   private double totalGasto;
+   private String numNotaFiscal;
 
     /**
      * @return the idManutencao
@@ -50,73 +31,73 @@ public class ManutencaoBeans {
     }
 
     /**
-     * @return the ultimaManut
+     * @return the osManutencao
      */
-    public String getUltimaManut() {
-        return ultimaManut;
+    public int getOsManutencao() {
+        return osManutencao;
     }
 
     /**
-     * @param ultimaManut the ultimaManut to set
+     * @param osManutencao the osManutencao to set
      */
-    public void setUltimaManut(String ultimaManut) {
-        this.ultimaManut = ultimaManut;
+    public void setOsManutencao(int osManutencao) {
+        this.osManutencao = osManutencao;
     }
 
     /**
-     * @return the carroIds
+     * @return the veiculoId
      */
-    public DadosCarroBeans getCarroIds() {
-        return carroIds;
+    public DadosCarroBeans getVeiculoId() {
+        return veiculoId;
     }
 
     /**
-     * @param carroIds the carroIds to set
+     * @param veiculoId the veiculoId to set
      */
-    public void setCarroIds(DadosCarroBeans carroIds) {
-        this.carroIds = carroIds;
+    public void setVeiculoId(DadosCarroBeans veiculoId) {
+        this.veiculoId = veiculoId;
     }
 
     /**
-     * @return the manutencaoKm
+     * @return the dataEntrada
      */
-    public String getManutencaoKm() {
-        return manutencaoKm;
+    public String getDataEntrada() {
+        return dataEntrada;
     }
 
     /**
-     * @param manutencaoKm the manutencaoKm to set
+     * @param dataEntrada the dataEntrada to set
      */
-    public void setManutencaoKm(String manutencaoKm) {
-        this.manutencaoKm = manutencaoKm;
+    public void setDataEntrada(String dataEntrada) {
+        this.dataEntrada = dataEntrada;
     }
 
     /**
-     * @return the dataManu
+     * @return the entradaKm
      */
-    public String getDataManu() {
-        return dataManu;
+    public String getEntradaKm() {
+        return entradaKm;
     }
 
     /**
-     * @param dataManu the dataManu to set
+     * @param entradaKm the entradaKm to set
      */
-    public void setDataManu(String dataManu) {
-        this.dataManu = dataManu;
+    public void setEntradaKm(String entradaKm) {
+        this.entradaKm = entradaKm;
     }
 
     /**
-     * @return the dadosManu
+     * @return the infManutencao
      */
-    public String getDadosManu() {
-        return dadosManu;
+    public String getInfManutencao() {
+        return infManutencao;
     }
 
     /**
-     * @param dadosManu the dadosManu to set
+     * @param infManutencao the infManutencao to set
      */
-    public void setDadosManu(String dadosManu) {
-        this.dadosManu = dadosManu;
+    public void setInfManutencao(String infManutencao) {
+        this.infManutencao = infManutencao;
     }
 
     /**
@@ -134,61 +115,31 @@ public class ManutencaoBeans {
     }
 
     /**
-     * @return the endereco
+     * @return the totalGasto
      */
-    public String getEndereco() {
-        return endereco;
+    public double getTotalGasto() {
+        return totalGasto;
     }
 
     /**
-     * @param endereco the endereco to set
+     * @param totalGasto the totalGasto to set
      */
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setTotalGasto(double totalGasto) {
+        this.totalGasto = totalGasto;
     }
 
     /**
-     * @return the cidadeId
+     * @return the numNotaFiscal
      */
-    public CidadeBeans getCidadeId() {
-        return cidadeId;
+    public String getNumNotaFiscal() {
+        return numNotaFiscal;
     }
 
     /**
-     * @param cidadeId the cidadeId to set
+     * @param numNotaFiscal the numNotaFiscal to set
      */
-    public void setCidadeId(CidadeBeans cidadeId) {
-        this.cidadeId = cidadeId;
+    public void setNumNotaFiscal(String numNotaFiscal) {
+        this.numNotaFiscal = numNotaFiscal;
     }
 
-    /**
-     * @return the estadoId
-     */
-    public EstadoBeans getEstadoId() {
-        return estadoId;
-    }
-
-    /**
-     * @param estadoId the estadoId to set
-     */
-    public void setEstadoId(EstadoBeans estadoId) {
-        this.estadoId = estadoId;
-    }
-
-    /**
-     * @return the gastoTotal
-     */
-    public double getGastoTotal() {
-        return gastoTotal;
-    }
-
-    /**
-     * @param gastoTotal the gastoTotal to set
-     */
-    public void setGastoTotal(double gastoTotal) {
-        this.gastoTotal = gastoTotal;
-    }
-    
-    
-    
 }

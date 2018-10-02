@@ -5,6 +5,7 @@
  */
 package br.com.View;
 
+import br.com.Connection.ConnectionJava;
 import br.com.ModelBeans.DadosCarroBeans;
 import br.com.ModelBeans.MarcaVeiculoBeans;
 import br.com.ModelBeans.ModeloVeiculoBeans;
@@ -13,6 +14,8 @@ import br.com.ModelDao.DadosCarroDao;
 import br.com.ModelDao.MarcaVeiculoDao;
 import br.com.ModelDao.ModeloVeiculoDao;
 import br.com.ModelDao.StatusDao;
+import java.awt.event.ItemEvent;
+import java.sql.Connection;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -33,7 +36,10 @@ public class CadastroCarroView extends javax.swing.JFrame {
         StatusDao status = new StatusDao();
         //Função abaixo Carrega o jCombox Marca.
         for(MarcaVeiculoBeans marcab : marca.ReadMarca()){
+           
             jComboMarca.addItem(marcab);
+            
+            
         }
         //Função abaixo carrega o jCombox Modelos.
         for(ModeloVeiculoBeans modelob : modelo.Read()){
@@ -118,6 +124,12 @@ public class CadastroCarroView extends javax.swing.JFrame {
         jLabel8.setText("Chassi");
 
         jTextID.setEnabled(false);
+
+        jComboMarca.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboMarcaItemStateChanged(evt);
+            }
+        });
 
         jComboFabricacao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024" }));
 
@@ -282,6 +294,16 @@ public class CadastroCarroView extends javax.swing.JFrame {
         
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboMarcaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboMarcaItemStateChanged
+        if(evt.getStateChange() == ItemEvent.SELECTED){
+            MarcaVeiculoBeans marca = (MarcaVeiculoBeans) jComboMarca.getSelectedItem();
+            ConnectionJava conn = new ConnectionJava();
+            conn.executaSql("select c from ModeloVeiculo where  c.marca =:marca");
+            
+            
+        }
+    }//GEN-LAST:event_jComboMarcaItemStateChanged
 
     /**
      * @param args the command line arguments
